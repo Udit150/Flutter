@@ -1,0 +1,30 @@
+Create Release App:
+    For Debug APK :
+        flutter build apk
+
+    For Release APK :
+        flutter build apk --release
+
+    For App Bundle :
+        flutter build appbundle
+
+It will help you to install App in Real Device
+---------------------------------------------------
+
+Scaffold Properties:
+    home: Scaffold(
+      drawer: Drawer(
+        backgroundColor: Colors.amber,
+        child: Center(child: Text("Hello World")),
+      ),
+      appBar: AppBar(
+        title: Text(message),
+        backgroundColor: Colors.red[300],
+      ),
+      body: Center(
+        child: Image(
+          image: AssetImage(image),
+        ),
+
+--------------------------------------------------
+
