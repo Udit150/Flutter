@@ -27,13 +27,6 @@ class Dicee extends StatefulWidget {
 class _DiceeState extends State<Dicee> {
   int left_dice = 3;
   int right_dice = 3;
-  void change_dice() {
-    setState(() {
-      left_dice = Random().nextInt(6) + 1;
-      right_dice = Random().nextInt(6) + 1;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -44,8 +37,9 @@ class _DiceeState extends State<Dicee> {
             Expanded(
               child: TextButton(
                 onPressed: () {
-                  change_dice();
-
+                  setState(() {
+                    left_dice = Random().nextInt(6) + 1;
+                  });
                   print("Left Button Clicked");
                 },
                 child: Image.asset("assets/images/dice$left_dice.png"),
@@ -54,8 +48,9 @@ class _DiceeState extends State<Dicee> {
             Expanded(
               child: TextButton(
                   onPressed: () {
-                    change_dice();
-
+                    setState(() {
+                      right_dice = Random().nextInt(6) + 1;
+                    });
                     print("Right Button Clicked");
                   },
                   child: Image.asset("assets/images/dice$right_dice.png")),
