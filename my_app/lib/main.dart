@@ -4,12 +4,11 @@ import 'dart:math';
 void main() {
   runApp(MaterialApp(
     home: Scaffold(
-      backgroundColor: Colors.red,
+      backgroundColor: Colors.blue,
       appBar: AppBar(
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.blue,
         title: Text(
           "Dicee",
-          textAlign: TextAlign.end,
         ),
       ),
       body: Dicee(),
